@@ -27,7 +27,7 @@ const ProductComponent = () => {
             {products.map((goods) => (
               <SplideSlide className="sliderDiv" key={goods.id}>
                 <Link to={`/product/${goods.id}`}>
-                  <img className="goods_parent_image" src={goods.image} />
+                  <img className="goods_parent_image" src={goods.image} alt="img" />
                 </Link>
               </SplideSlide>
             ))}
@@ -38,7 +38,7 @@ const ProductComponent = () => {
         return (
           <div className="goods_parent_div" key={goods.id}>
             <Link to={`/product/${goods.id}`}>
-              <img className="goods_parent_image" src={goods.image} />
+              <img className="goods_parent_image" src={goods.image} alt="image" />
               <p className="goods_parent_price">{goods.category}</p>
               <p className="goods_parent_price">{goods.price}$</p>
             </Link>

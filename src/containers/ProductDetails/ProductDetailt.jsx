@@ -14,7 +14,7 @@ const ProductDetailt = () => {
 
   useEffect(() => {
     dispatch(fetchProduct(productId));
-  }, [productId]);
+  }, [dispatch, productId]);
 
   return (
     <div className="Detailt-parent-div" key={product.id}>
@@ -25,6 +25,7 @@ const ProductDetailt = () => {
             src: product.image,
             width: 5000,
             height: 70400,
+            alt: "Product" // Added alt prop
           },
           largeImage: {
             src: product.image,
