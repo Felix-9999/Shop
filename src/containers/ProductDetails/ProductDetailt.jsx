@@ -15,6 +15,7 @@ const ProductDetailt = () => {
   useEffect(() => {
     dispatch(fetchProduct(productId));
   }, [productId]);
+
   return (
     <div className="Detailt-parent-div" key={product.id}>
       <ReactImageMagnify
@@ -35,7 +36,7 @@ const ProductDetailt = () => {
       <div className="text-div">
         <h2>{product.title}</h2>
         <p>{product.description}</p>
-        <button onClick={() => navigate(-1)} class="go-back">
+        <button onClick={() => navigate(-1)} className="go-back">
           --GO BACK--
         </button>
       </div>
@@ -44,5 +45,3 @@ const ProductDetailt = () => {
 };
 
 export default ProductDetailt;
-{
-}
